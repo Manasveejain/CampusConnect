@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f0f4f8;
+      color: #333;
+    }
+    nav {
+      background-color: #4a90e2;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+    header {
+      padding: 3rem;
+      text-align: center;
+      background: linear-gradient(to right, #3b82f6, #60a5fa);
+      color: white;
+    }
+    section {
+      padding: 2rem;
+    }
+    footer {
+        background-color: #4a90e2;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        position:fixed;
+        bottom: 0;
+        width: 100%;
+        margin-top: 2rem;
+        box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+      }
+  </style>
+  
+</head>
+<body>
+  <nav>
+    <div><strong>CampusConnect</strong></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="create-post.html">Posts</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a>
+        <div class="profile-dropdown">
+          <img src="default-profile.svg" alt="Profile" class="nav-profile-pic" id="navProfilePic" />
+          <div class="dropdown-menu" id="profileDropdown">
+            <a href="profile.html">My Profile</a>
+            <a href="my-posts.html">My Posts</a>
+            <a href="#" id="logoutBtn">Logout</a>
+          </div>
+        </div>
+      </a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Welcome to CampusConnect</h1>
+    <p>Your portal to college life and activities</p>
+  </header>
+
+  <section>
+    <h2>About Us</h2>
+    <p>CampusConnect is a student-led initiative aimed at making college information easily accessible. We help students stay updated on events, lectures, and campus facilities.</p>
+  </section>
+
+<script src="script.js"></script>
+
+<div class="popup" id="loginPopup" style="display: none;">
+  <div class="popup-content">
+    <h3>Login</h3>
+    <input type="text" id="usernameInput" placeholder="Enter college email " required />
+    <button id="loginBtn">Login</button>
+  </div>
+</div>
+
+  <footer>
+    &copy; 2025 My College Project. All rights reserved.
+  </footer>  
+</body>
+</html>
