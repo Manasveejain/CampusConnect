@@ -1,0 +1,6 @@
+ <!-- Save this as default-profile.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="120" height="120">
+  <circle cx="256" cy="256" r="256" fill="#ccc"/>
+  <circle cx="256" cy="176" r="80" fill="#999"/>
+  <path d="M128 384c0-70.7 57.3-128 128-128s128 57.3 128 128H128z" fill="#999"/>
+</svg>

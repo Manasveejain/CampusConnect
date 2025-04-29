@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Posts - CampusConnect</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div><strong>CampusConnect</strong></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="create-post.html">Posts</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a>
+        <div class="profile-dropdown">
+          <img src="default-profile.svg" alt="Profile" class="nav-profile-pic" id="navProfilePic" />
+          <div class="dropdown-menu" id="profileDropdown">
+            <a href="profile.html">My Profile</a>
+            <a href="my-posts.html">My Posts</a>
+            <a href="#" id="logoutBtn">Logout</a>
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </nav>
+
+  <section>
+    <h2>Create a New Post</h2>
+    <form id="postForm">
+      <input type="text" id="postTitle" placeholder="Post Title" required />
+      <textarea id="postContent" placeholder="Write your content here..." rows="6" required></textarea>
+      <input type="file" id="postImage" accept="image/*" />
+      <select id="postCategory">
+        <option value="General">General</option>
+        <option value="Event">Event</option>
+        <option value="Notice">Notice</option>
+        <option value="Club">Club</option>
+      </select>
+      <button type="submit">Post</button>
+    </form>
+
+    <div id="postConfirmation"></div>
+
+    <h2>Your Posts</h2>
+    <div id="postsContainer"></div>
+  </section>
+
+  <footer>
+    &copy; 2025 My College Project. All rights reserved.
+  </footer>
+  <script src="post.js"></script>
+  <script src="script.js"></script>
+  <div class="popup" id="loginPopup" style="display: none;">
+    <div class="popup-content">
+      <h3>Login</h3>
+      <input type="text" id="usernameInput" placeholder="Enter college email" required />
+      <button id="loginBtn">Login</button>
+    </div>
+  </div>
+</body>
+</html>

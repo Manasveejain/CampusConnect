@@ -1,0 +1,277 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  color: #333;
+}
+#profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#profileInfo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+#profileInfo input[type="file"] {
+  margin-top: 10px;
+}
+
+#profilePic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  transition: transform 0.2s ease;
+}
+
+#profilePic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px #aaa;
+}
+.popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.popup-content input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.popup-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* Navbar */
+nav {
+  background-color: #4a90e2;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #d4e8ff;
+}
+
+.nav-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  transition: transform 0.3s ease;
+}
+
+.nav-profile-pic:hover {
+  transform: scale(1.1);
+}
+
+
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-menu a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Section Container */
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/* Form Styles */
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #357bd8;
+}
+
+/* Post Styles */
+.post {
+  background: #f4f4f4;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.post h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+.post p {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.post img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.post-actions button {
+  margin-right: 10px;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-actions button:hover {
+  background-color: #ccc;
+}
+
+/* Confirmation Text */
+#postConfirmation {
+  margin-top: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2rem;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  grid-template-columns: (auto-fill, minmax(200px, 1fr));
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin: 0.5rem 0 0;
+  }
+
+  section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
